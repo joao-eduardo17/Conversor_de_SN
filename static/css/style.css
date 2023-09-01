@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Roboto:wght@100&display=swap');
 
+:root{
+    --cor-primaria: 
+    --cor-secundaria:
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +17,7 @@ body{
 .navbar{
     display: flex;
     gap: 1.2rem;
-    background-color: #164B60;
+    background-color: #1C1427;
     padding: 1rem;
 }
 
@@ -20,19 +25,20 @@ body{
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
-    color: #A2FF86;
+    color: #7ECA9C;
     margin-left: 1.5rem;
 }
 
 .apresentacao{
-    background-color: #F6F6F6;
+    background-color: #b6c157;
     margin: 0% 5%;
     height: 90%;
 }
 
 .apresentacao_titulo{
     font-family: 'Krona One', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 0.5rem auto auto;
 }
 
 .apresentacao_texto{
@@ -43,11 +49,28 @@ body{
 
 }
 
+.apresentacao_conteudo{
+    padding: 0.5rem;
+}
+
+.apresentacao_conteudo_texto{
+    
+}
+
 .rodape{
     font-size: larger;
     color: #A2FF86;
+    position: fixed;
     text-align: center;
     background-color: #164B60;
     padding: 1rem;
+    width: 100%;
+    bottom: 0;
+    /*display: flex;
+    align-items: end;*/
 }
 
+#imagem_fun{
+    height: 20rem;
+    width: 20rem;
+}
