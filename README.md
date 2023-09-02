@@ -1,4 +1,4 @@
-d<h2>Conversor de Sistemas Numéricos</h2>
+<h2>Conversor de Sistemas Numéricos</h2>
 Um site que possui a capacidade de converter sistemas numéricos, como binário, octal, hexadecimal e decimal.
 
 ## Status
