@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Roboto&family=Space+Mono:wght@400;700&display=swap');
+
+
+:root{
+    --background: #40394A;
+    --cor-barras: #1C1427;
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-barras: #7ECA9C;
+    --cor-texto-barras-hover: #CCFFBD;
+    --fonte-barras: 'Montserrat', sans-serif;
+    --fonte-titulo: 'Inconsolata', monospace;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1B6B93;
+}
+
+.navbar{
+    display: flex;
+    gap: 1.2rem;
+    background-color: var(--cor-barras);
+    padding: 1rem;
+}
+
+.nav_link{
+    text-decoration: none;
+    font-family: var(--fonte-barras);
+    font-size: 1.1rem;
+    color: var(--cor-texto-barras);
+    margin-left: 1.5rem;
+}
+
+.nav_link:hover{
+    color: var(--cor-texto-barras-hover);
+}
+
+.apresentacao{
+    background-color: var(--background);
+    /* margin: 0% 5%; */  
+}
+
+.apresentacao_titulo{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.apresentacao_texto{
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    font-size: 1rem;
+
+}
+
+.apresentacao_conteudo{
+    padding: 0.5rem;
+}
+
+.apresentacao_conteudo_texto{
+    /* padding: 0; */
+}
+
+.rodape{
+    font-size: larger;
+    color: var(--cor-texto-barras);
+    position: fixed;
+    text-align: center;
+    background-color: var(--cor-barras);
+    font-family: var(--fonte-barras);
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+}
+
+#imagem_fun{
+    height: 20rem;
+    width: 20rem;
+}
