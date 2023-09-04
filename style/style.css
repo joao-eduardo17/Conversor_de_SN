@@ -4,11 +4,12 @@
 :root{
     --background: #40394A;
     --cor-barras: #1C1427;
-    --cor-texto-principal: #FFFFFF;
+    --cor-texto-principal: #DBE2EF;
     --cor-texto-barras: #7ECA9C;
     --cor-texto-barras-hover: #CCFFBD;
     --fonte-barras: 'Montserrat', sans-serif;
     --fonte-titulo: 'Inconsolata', monospace;
+    --fonte-principal: 'Roboto', sans-serif
 
 }
 
@@ -18,7 +19,7 @@
 }
 
 body{
-    background-color: #1B6B93;
+    background-color: var(--background);
 }
 
 .navbar{
@@ -42,45 +43,70 @@ body{
 
 .apresentacao{
     background-color: var(--background);
-    /* margin: 0% 5%; */  
 }
 
 .apresentacao_titulo{
     font-family: var(--fonte-titulo);
-    color: var(--cor-texto-principal);
-    font-size: 2rem;
-    padding: 0.5rem;
+    color: var(--cor-texto-barras);
+    padding: 1rem 2.5rem 0.5rem;
 }
 
 .apresentacao_texto{
     text-align: justify;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-principal);
     font-weight: 1000;
     font-size: 1rem;
-
+    color: var(--cor-texto-principal);
+    padding: 0 2.5rem 0.5rem;
 }
 
 .apresentacao_conteudo{
     padding: 0.5rem;
+    /* display: flex; */
 }
 
-.apresentacao_conteudo_texto{
-    /* padding: 0; */
+.apresentacao_conteudo_titulo{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-barras);
+    padding: 0.5rem 2.5rem 0.5rem;
+}
+
+.apresentacao_conteudo_texto{     
+    color: var(--cor-texto-principal);
+    text-align: justify;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    padding: 0 2.7rem 0.5rem;
+}
+
+.apresentacao_conteudo_imagens{
+    display: flex;
 }
 
 .rodape{
     font-size: larger;
     color: var(--cor-texto-barras);
-    position: fixed;
     text-align: center;
     background-color: var(--cor-barras);
     font-family: var(--fonte-barras);
     padding: 1rem;
-    width: 100%;
     bottom: 0;
+}
+
+.rodape_nocontent{
+    font-size: larger;
+    position: absolute;
+    color: var(--cor-texto-barras);
+    text-align: center;
+    background-color: var(--cor-barras);
+    font-family: var(--fonte-barras);
+    padding: 1rem;
+    bottom: 0;    
+    width: 97.85%;
 }
 
 #imagem_fun{
     height: 20rem;
     width: 20rem;
+    padding: 0 2.7rem 0.1rem;
 }
