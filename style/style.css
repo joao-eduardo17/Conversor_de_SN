@@ -62,7 +62,6 @@ body{
 
 .apresentacao_conteudo{
     padding: 0.5rem;
-    /* display: flex; */
 }
 
 .apresentacao_conteudo_titulo{
@@ -79,8 +78,14 @@ body{
     padding: 0 2.7rem 0.5rem;
 }
 
-.apresentacao_conteudo_imagens{
-    display: flex;
+.apresentacao_conteudo_imagem{
+    padding: 0.5rem 2.5rem 7rem;
+    width: 13rem;
+}
+
+.apresentacao > img{
+    width: 13rem;
+    padding: 0 2.5rem 1rem;
 }
 
 .rodape{
@@ -105,8 +110,8 @@ body{
     width: 97.85%;
 }
 
-#imagem_fun{
+/* #imagem_fun{
     height: 20rem;
     width: 20rem;
     padding: 0 2.7rem 0.1rem;
-}
+} */
