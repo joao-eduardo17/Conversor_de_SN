@@ -79,8 +79,14 @@ body{
 }
 
 .apresentacao_conteudo_imagem{
-    padding: 0.5rem 2.5rem 7rem;
+    padding: 2rem 2.5rem;
     width: 13rem;
+}
+
+.apresentacao_conteudo_imagem_pai{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
 }
 
 .apresentacao > img{
