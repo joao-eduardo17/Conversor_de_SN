@@ -1,5 +1,5 @@
 #Decimal para binário
-def binário(n):
+def binario(n):
     resultado = ''
     if n == 0:
         return n
@@ -11,22 +11,43 @@ def binário(n):
 #Deciaml para octal
 def octal(n):
     resultado = ''
-    if n <= 8:
+    if n < 8:
         return n
-    while n > 8:
+    while n >= 8:
         resultado += str(n%8)
         n = n//8
     x = str(n) + str(resultado[::-1])
     return int(x)
 
 #Decimal para hexadecimal
-# def hexa(n):
-#     resultado = ''
-#     if n <= 16:
-#         return n
-#     while n > 16:
-#         x = n % 16
-#         if x > 9:
-#             match (x):
-#                 case 11:
-#                      return
+def hexa(n):
+    resultado = ''
+    letras = 'a b c d e f'.split()
+    index = 10
+    if n <= 9:
+        return n
+    if n > 9 and n <= 15:
+        for c in range(6):
+            if n == index:
+                print(letras[c])
+                return
+            index += 1
+    while n > 15:
+        x = n % 16
+        if x > 9:
+            index = 10
+            for k in range(6):
+                if x == index:
+                    resultado += letras[k]
+                index += 1
+        else:
+            resultado += str(x)
+        n = n//16
+    if n > 9:
+        index = 10
+        for p in range(6):
+            if n == index:
+                n = letras[p]
+            index += 1
+    print(str(n) + resultado[::-1])
+    return
