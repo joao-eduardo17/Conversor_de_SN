@@ -1,5 +1,5 @@
 //Decimal para binário
-function binarioToDecimal(n){
+function decimalToBinario(n){
     let resultado = '';
     if(n == 0){
         return n;
@@ -8,12 +8,12 @@ function binarioToDecimal(n){
         resultado += String(n%2);
         n = Math.floor(n/2);
     }
-    resultado = resultado.split("").reverse().join("");
+    resultado = resultado.split("").reverse().join(""); 
     return '1' + resultado
 }
 
 //Decimal para octal
-function octalToDecimal(n){
+function decimalToOctal(n){
     let resultado = '';
     if(n < 8){
         return n;
@@ -29,8 +29,8 @@ function octalToDecimal(n){
 
 
 //Decimal para Hexadecimal
-function hexaToDecimal(n){
-    const letras = 'a b c d e f'.split('');
+function decimalToHexa(n){
+    const letras = ['a','b','c','d','e','f'];
     let resultado = '';
     let index = 10;
     let divisão;
@@ -38,7 +38,7 @@ function hexaToDecimal(n){
         return n
     }
     if(n > 9 && n <= 15){
-        for(let c = 0; c < 12 ; c+=2){
+        for(let c = 0; c < 6; c++){
             if(n == index){
                 return letras[c]
             }
@@ -49,7 +49,7 @@ function hexaToDecimal(n){
         divisão = n % 16;
         if(divisão > 9){
             index = 10;
-            for(let k = 0; k < 12; k+=2){
+            for(let k = 0; k < 6; k++){
                 if(divisão == index){
                     resultado += letras[k];
                 }
@@ -62,7 +62,7 @@ function hexaToDecimal(n){
     }
     if(n > 9){
         index = 10;
-        for(let p = 0; p < 12; p+=2){
+        for(let p = 0; p < 6; p++){
             if(n == index){
                 n = letras[p];
             }

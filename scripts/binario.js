@@ -1,10 +1,29 @@
 //Binário para octal
-function octal(n){
-    return
+function binarioToOctal(n){
+    n = String(n);
+    if(n.length % 3 == 1){
+        n = '00' + n;
+    }if(n.length % 3 == 2){
+        n = '0' + n;
+    }
+    let resultado = '';
+    const numeros = ['000','001','010','011','100','101','110','111'];
+    for(let c = 0; c < n.length; c+=3){
+        let contador = 0;
+        let index = String(n).slice(c,c+3);
+        numeros.forEach((e) => {
+            if(index == e){
+                resultado += String(contador);
+            }
+            contador++;
+        })
+    }
+    console.log(resultado)
+    return parseInt(resultado)
 }
 
 //Binário para decimal
-function decimalToBinario(n){
+function binarioToDecimal(n){
     let lista = String(n);
     lista = lista.split('');
     let tamanho = String(n).length - 1;
