@@ -4,7 +4,7 @@ function octal(n){
 }
 
 //Binário para decimal
-function decimal(n){
+function decimalToBinario(n){
     let lista = String(n);
     lista = lista.split('');
     let tamanho = String(n).length - 1;

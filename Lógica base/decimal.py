@@ -29,10 +29,11 @@ def hexa(n):
     if n > 9 and n <= 15:
         for c in range(6):
             if n == index:
+
                 print(letras[c])
                 return
             index += 1
-    while n > 15:
+    while n >= 16:
         x = n % 16
         if x > 9:
             index = 10
