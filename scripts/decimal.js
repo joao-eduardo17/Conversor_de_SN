@@ -27,7 +27,6 @@ function decimalToOctal(n){
 
 }
 
-
 //Decimal para Hexadecimal
 function decimalToHexa(n){
     const letras = ['a','b','c','d','e','f'];
