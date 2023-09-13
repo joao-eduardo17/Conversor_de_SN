@@ -69,7 +69,7 @@ function octalToHexa(n){
             }else if(index == e){
                 resultado += String(contador);
             }
-            contador++
+            contador++;
         })
     }
     return resultado
