@@ -16,11 +16,21 @@
     </header>
     <main class="apresentacao">
         <h1 class="apresentacao_titulo">INSIRA O TIPO DE NÚMERO QUE VOCÊ DESEJA CONVERTER</h1>
-        <form>
-            <input type="radio" name="botao_escoha">Binário
-            <input type="radio" name="botao_escoha">Octal
-            <input type="radio" name="botao_escoha">Decimal
-            <input type="radio" name="botao_escoha">Hexadecimal
+        <form class="apresentacao_botoes">
+            <select name="oi" id="bobobo">
+                <option id="traduzir" value="binario">Binário</option>
+                <option id="traduzir" value="binario">Octal</option>
+                <option id="traduzir" value="binario">Decimal</option>
+                <option id="traduzir" value="binario">Hexadecimal</option>
+            </select>
+            <input type="text">
+        </form>
+        <form class="apresentacao_botoes">
+            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido"> 1
+            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">2
+            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">3
+            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">4
+            <input type="button" id="converter">
         </form>
     </main>
     <footer class="rodape_nocontent"><p>Desenvolvido por John Wick.</p></footer>
@@ -29,4 +39,5 @@
 <script src="/scripts/decimal.js"></script>
 <script src="/scripts/hexadecimal.js"></script>
 <script src="/scripts/octal.js"></script>
+<script src="/scripts/main.js"></script>
 </html>
