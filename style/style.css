@@ -84,14 +84,14 @@ body{
 }
 
 .apresentacao_conteudo_imagem{
-    padding: 2rem 2.5rem;
-    width: 13rem;
+    padding-left: 2.5rem;
+    padding-top: 1rem;
+    width: 10rem;
 }
 
 .apresentacao_conteudo_imagem_pai{
     display: flex;
-    flex-direction:row;
-    justify-content: space-around;
+    flex-direction: row;
 }
 
 .apresentacao > img{

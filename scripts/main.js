@@ -1,14 +1,59 @@
-const converter = document.querySelector("#converter");
-const select = document.querySelector('#traduzir');
-const checkbox = document.querySelectorAll("#traduzido");
+const selecoes = document.querySelector("#selects");
+const selecao = document.querySelectorAll("#traduzir");
+const check = document.querySelectorAll("#traduzido");
+const numero = document.querySelector("#numero");
+const converte = document.querySelector("#converter");
 
-converter.addEventListener("click",() => {
-    return
+converte.addEventListener("click",() => {
+    if(selecao[0].selected === true){
+        if(check[1].checked === true){
+            binarioToOctal(numero.value);
+        }
+        if(check[2].checked === true){
+            binarioToDecimal(numero.value);
+        }
+        if(check[3].checked === true){
+            binarioToHexa(numero.value);
+        }
+    }else if(selecao[1].selected === true){
+        if(check[0].checked === true){
+            octalToBinario(numero.value);
+        }
+        if(check[2].checked === true){
+            octalToDecimal(numero.value);
+        }
+        if(check[3].checked === true){
+            octalToHexa(numero.value);
+        }
+    } else if(selecao[2].selected === true){
+        if(check[0].checked === true){
+            decimalToBinario(numero.value);
+        }
+        if(check[1].checked === true){
+            decimalToOctal(numero.value);
+        }
+        if(check[3].checked === true){
+            decimalToHexa(numero.value);
+        }
+    } else if(selecao[3].selected === true){
+        if(check[0].checked === true){
+            hexaToBinario(numero.value);
+        }
+        if(check[1].checked === true){
+            hexaToOctal(numero.value);
+        }
+        if(check[2].checked === true){
+            hexaToDecimal(numero.value);
+        }
+    }
 })
 
-
-
-
+selecao.forEach((e, i) => {
+    e.addEventListener("click", () => {
+        check.forEach((k) => k.disabled = false)
+        check[i].disabled = true
+    })
+})
 
 
 
