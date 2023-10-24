@@ -1,64 +1,52 @@
 const selecoes = document.querySelector("#selects");
 const selecao = document.querySelectorAll("#traduzir");
-const check = document.querySelectorAll("#traduzido");
 const numero = document.querySelector("#numero");
 const converte = document.querySelector("#converter");
+const binarioHTML = document.querySelector("#binario");
+const octalHTML = document.querySelector("#octal");
+const decimalHTML = document.querySelector("#decimal");
+const hexadecimalHTML = document.querySelector("#hexadecimal");
+
 
 converte.addEventListener("click",() => {
     if(selecao[0].selected === true){
-        if(check[1].checked === true){
-            binarioToOctal(numero.value);
-        }
-        if(check[2].checked === true){
-            binarioToDecimal(numero.value);
-        }
-        if(check[3].checked === true){
-            binarioToHexa(numero.value);
-        }
+        binarioSelect()
     }else if(selecao[1].selected === true){
-        if(check[0].checked === true){
-            octalToBinario(numero.value);
-        }
-        if(check[2].checked === true){
-            octalToDecimal(numero.value);
-        }
-        if(check[3].checked === true){
-            octalToHexa(numero.value);
-        }
-    } else if(selecao[2].selected === true){
-        if(check[0].checked === true){
-            decimalToBinario(numero.value);
-        }
-        if(check[1].checked === true){
-            decimalToOctal(numero.value);
-        }
-        if(check[3].checked === true){
-            decimalToHexa(numero.value);
-        }
-    } else if(selecao[3].selected === true){
-        if(check[0].checked === true){
-            hexaToBinario(numero.value);
-        }
-        if(check[1].checked === true){
-            hexaToOctal(numero.value);
-        }
-        if(check[2].checked === true){
-            hexaToDecimal(numero.value);
-        }
+        octalSelect()
+    }else if(selecao[2].selected === true){
+        decimalSelect()
+    }else if(selecao[3].selected === true){
+        hexaSelect()
     }
 })
 
-selecao.forEach((e, i) => {
-    e.addEventListener("click", () => {
-        check.forEach((k) => k.disabled = false)
-        check[i].disabled = true
-    })
-})
+function binarioSelect(){
+    binarioHTML.innerHTML = numero.value
+    octalHTML.innerHTML = binarioToOctal(numero.value)
+    decimalHTML.innerHTML = binarioToDecimal(numero.value)
+    hexadecimalHTML.innerHTML = binarioToHexa(numero.value)
+}
 
+function octalSelect(){
+    binarioHTML.innerHTML = octalToBinario(numero.value)
+    octalHTML.innerHTML = numero.value
+    decimalHTML.innerHTML = octalToDecimal(numero.value)
+    hexadecimalHTML.innerHTML = octalToHexa(numero.value)
+}
 
+function decimalSelect(){
+    binarioHTML.innerHTML = decimalToBinario(numero.value)
+    octalHTML.innerHTML = decimalToOctal(numero.value)
+    decimalHTML.innerHTML = numero.value
+    hexadecimalHTML.innerHTML = decimalToHexa(numero.value)
+}
 
-
-
+function hexaSelect(){
+    binarioHTML.innerHTML = hexaToBinario(numero.value)
+    octalHTML.innerHTML = hexaToOctal(numero.value)
+    decimalHTML.innerHTML = hexaToDecimal(numero.value)
+    hexadecimalHTML.innerHTML = numero.value
+}
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -82,16 +70,15 @@ function binarioToOctal(n){
             contador++;
         })
     }
-    console.log(resultado)
     return parseInt(resultado)
 }
 
 //Binário para decimal
 function binarioToDecimal(n){
     let lista = String(n);
-    lista = lista.split('');
     let tamanho = String(n).length - 1;
     let resultado = 0;
+    lista = lista.split('');
     lista.forEach((e) => {
         if(e == '1'){
             resultado += 2**tamanho;
@@ -326,7 +313,7 @@ function hexaToBinario(n){
             index++
         }
     })
-    return resultado
+    return parseInt(resultado)
 }
 
 //Hexadecimal para octal

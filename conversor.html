@@ -15,29 +15,42 @@
         </nav>
     </header>
     <main class="apresentacao">
-        <h1 class="apresentacao_titulo">INSIRA O TIPO DE NÚMERO QUE VOCÊ DESEJA CONVERTER</h1>
-        <form class="apresentacao_botoes">
-            <select name="oi" id="selects">
-                <option id="traduzir" value="binario">Binário</option>
-                <option id="traduzir" value="binario">Octal</option>
-                <option id="traduzir" value="binario">Decimal</option>
-                <option id="traduzir" value="binario">Hexadecimal</option>
-            </select>
-            Escreve<input id="numero" type="text">
-        </form>
-        <form class="apresentacao_botoes">
-            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido" disabled = true> 1
-            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">2
-            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">3
-            <input class="apresentacao_botao" id="traduzido" type="checkbox" name="botao_escolhido">4
-            <input type="button" id="converter">
-        </form>
+        <div>
+            <h1 class="apresentacao_titulo">INSIRA O TIPO DE NÚMERO QUE VOCÊ DESEJA CONVERTER</h1>
+            <form class="apresentacao_botoes">
+                <select name="oi" id="selects" class="apresentacao_botoes_option">
+                    <option id="traduzir" value="binario">Binário</option>
+                    <option id="traduzir" value="binario">Octal</option>
+                    <option id="traduzir" value="binario">Decimal</option>
+                    <option id="traduzir" value="binario">Hexadecimal</option>
+                    <input id="numero" type="text" placeholder="Ex: 1010">
+                    <input type="button" id="converter" value="TRADUZ">
+                </select>
+            </form>
+        </div>
+
+        <div class="apresentacao_div">
+            <div class="apresentacao_respostas">
+                <div class="apresentacao_respostas_resultados">
+                    <label>Binário: </label>
+                    <label id="binario">1010</label>
+                </div>
+                <div class="apresentacao_respostas_resultados">
+                    <label>Octal: </label>
+                    <label id="octal">12</label>
+                </div>
+                <div class="apresentacao_respostas_resultados">
+                    <label>Decimal: </label>
+                    <label id="decimal">10</label>
+                </div>
+                <div class="apresentacao_respostas_resultados">
+                    <label>Hexadecimal: </label>
+                    <label id="hexadecimal">a</label>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="rodape_nocontent"><p>Desenvolvido por John Wick.</p></footer>
 </body>
-<script src="/scripts/binario.js"></script>
-<script src="/scripts/decimal.js"></script>
-<script src="/scripts/hexadecimal.js"></script>
-<script src="/scripts/octal.js"></script>
 <script src="/scripts/main.js"></script>
 </html>

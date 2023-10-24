@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Roboto&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Noto+Sans+Sogdian&family=Roboto&family=Sometype+Mono&family=Space+Mono:wght@400;700&display=swap');
 
 
 :root{
     --background: #40394A;
-    --cor-barras: #1C1427;
+    --cor-barras: #1c1427;
+    --cor-shadow: #261d32;
     --cor-texto-principal: #DBE2EF;
     --cor-texto-barras: #7ECA9C;
     --cor-texto-barras-hover: #CCFFBD;
     --fonte-barras: 'Montserrat', sans-serif;
     --fonte-titulo: 'Inconsolata', monospace;
-    --fonte-principal: 'Roboto', sans-serif
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-respostas: 'Sometype Mono', monospace;
 
 }
 
@@ -45,6 +47,37 @@ body{
     background-color: var(--background);
 }
 
+.apresentacao_botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto-principal);
+    padding: 1rem 2.5rem;
+}
+
+.apresentacao_div{
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacao_respostas{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.5rem 0.5rem 10px var(--cor-shadow);
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-barras);
+    font-size: 1.5rem;
+    font-family: var(--fonte-respostas);
+    color: var(--cor-texto-principal);
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+    width: 50%;
+    margin-top: 1rem;
+}
+
 .apresentacao_titulo{
     font-family: var(--fonte-titulo);
     color: var(--cor-texto-barras);
@@ -64,10 +97,10 @@ body{
     padding: 0.5rem;
 }
 
-.apresentacao_botoes{
-    font-family: var(--fonte-principal);
-    color: var(--cor-texto-principal);
-}
+
+/* .apresentacao_botoes_option{
+    
+} */
 
 .apresentacao_conteudo_titulo{
     font-family: var(--fonte-titulo);
@@ -121,9 +154,4 @@ body{
     width: 97.85%;
 }
 
-/* #imagem_fun{
-    height: 20rem;
-    width: 20rem;
-    padding: 0 2.7rem 0.1rem;
-} */
 
