@@ -2,7 +2,7 @@
 Um site que possui a capacidade de converter sistemas numéricos, como binário, octal, hexadecimal e decimal.
 
 ## Status
-Em desenvolvimento
+### FINALIZADO
 
 
 <hr>
